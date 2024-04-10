@@ -14,6 +14,7 @@ exports.createOrder = async (req, res) => {
 // Controller to get all orders
 exports.getOrders = async (_, res) => {
   try {
+    // console.log("called");
     const orders = await Order.find();
     res.status(200).json({ success: true, data: orders });
   } catch (error) {
